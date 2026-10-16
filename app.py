@@ -19,7 +19,12 @@ st.set_page_config(
 # Direct image URL from your Kommodo share link.
 # Note: the provider says this link expires on November 15, 2026.
 HERO_IMAGE_URL = "https://plain-apac-prod-public.komododecks.com/202610/16/k8sVsf4t5cCYVrjo9FMT/image.png"
-
+with hero_image:
+    st.image(
+        HERO_IMAGE_URL,
+        width=400,
+        caption="Mobile hardware specifications",
+    )
 # =========================================================
 # 3. LOAD MODEL AND SCALER
 # =========================================================
