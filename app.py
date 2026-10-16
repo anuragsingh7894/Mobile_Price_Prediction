@@ -146,7 +146,7 @@ st.markdown(
 # =========================================================
 # 5. HERO SECTION: TEXT + YOUR IMAGE
 # =========================================================
-hero_text, hero_image = st.columns([1.1, 1], gap="large", vertical_alignment="center")
+hero_text, hero_image = st.columns([1.15, 0.85], gap="large", vertical_alignment="center")
 
 with hero_text:
     st.markdown(
@@ -165,14 +165,27 @@ with hero_text:
     )
 
 with hero_image:
+    # Keep the image balanced within the right column.
+    # A width of 360px works well at desktop sizes.
     st.markdown(
         """
         <style>
         div[data-testid="stImage"] {
+            width: 100%;
             display: flex;
-            justify-content: flex-end;
+            flex-direction: column;
+            align-items: flex-end;
         }
         div[data-testid="stImage"] img {
+            width: min(100%, 360px) !important;
+            height: auto !important;
+            object-fit: contain !important;
+            margin-left: auto;
+            margin-right: 0;
+        }
+        div[data-testid="stImage"] figcaption {
+            width: min(100%, 360px);
+            text-align: center;
             margin-left: auto;
             margin-right: 0;
         }
@@ -182,7 +195,7 @@ with hero_image:
     )
     st.image(
         HERO_IMAGE_URL,
-        width=400,  # Image width in pixels
+        width=360,
         caption="Mobile hardware specifications",
     )
 
