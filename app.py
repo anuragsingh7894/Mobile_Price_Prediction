@@ -165,9 +165,24 @@ with hero_text:
     )
 
 with hero_image:
+    st.markdown(
+        """
+        <style>
+        div[data-testid="stImage"] {
+            display: flex;
+            justify-content: flex-end;
+        }
+        div[data-testid="stImage"] img {
+            margin-left: auto;
+            margin-right: 0;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
     st.image(
         HERO_IMAGE_URL,
-        width=400,  # Slightly smaller image; try 380 or 420 if preferred
+        width=400,  # Image width in pixels
         caption="Mobile hardware specifications",
     )
 
