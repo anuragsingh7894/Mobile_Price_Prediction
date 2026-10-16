@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import joblib
-from pathlib import Path
 
 # =========================================================
 # 1. PAGE CONFIGURATION
@@ -15,13 +14,11 @@ st.set_page_config(
 )
 
 # =========================================================
-# 2. CONFIGURATION: SET YOUR HERO IMAGE PATH HERE
+# 2. HERO IMAGE URL
 # =========================================================
-# Option 1: Keep the image in the same folder as app.py:
-HERO_IMAGE_PATH = Path(r"D:\DS_Practice\Assignments\Linear Regression\Mobile Price Prediction Phone Diagram.png")
-
-# Option 2: Use an absolute Windows path, for example:
-# HERO_IMAGE_PATH = Path(r"D:\Projects\MobilePriceApp\images\mobile_hero.png")
+# Direct image URL from your Kommodo share link.
+# Note: the provider says this link expires on November 15, 2026.
+HERO_IMAGE_URL = "https://plain-apac-prod-public.komododecks.com/202610/16/k8sVsf4t5cCYVrjo9FMT/image.png"
 
 # =========================================================
 # 3. LOAD MODEL AND SCALER
@@ -168,12 +165,11 @@ with hero_text:
     )
 
 with hero_image:
-    if HERO_IMAGE_PATH.is_file():
-        st.image(str(HERO_IMAGE_PATH), use_container_width=True)
-    else:
-        st.caption(
-            "Add your image as mobile_hero.png beside app.py, or update HERO_IMAGE_PATH near the top of the file."
-        )
+    st.image(
+        HERO_IMAGE_URL,
+        use_container_width=True,
+        caption="Mobile hardware specifications",
+    )
 
 # =========================================================
 # 6. SPECIFICATION INPUTS
