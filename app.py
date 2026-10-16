@@ -146,7 +146,7 @@ st.markdown(
 # =========================================================
 # 5. HERO SECTION: TEXT + YOUR IMAGE
 # =========================================================
-hero_text, hero_image = st.columns([1.1, 1], gap="large", vertical_alignment="center")
+hero_text, hero_image = st.columns([1.1, 1], gap="large", vertical_alignment="right")
 
 with hero_text:
     st.markdown(
