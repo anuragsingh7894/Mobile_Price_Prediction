@@ -196,7 +196,7 @@ with hero_image:
     st.image(
         HERO_IMAGE_URL,
         width=360,
-        caption="Mobile hardware specifications",
+        caption="",
     )
 
 # =========================================================
