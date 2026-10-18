@@ -1,3 +1,4 @@
+
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -317,7 +318,7 @@ if predict_clicked:
                 f"""
                 <div class="result-card">
                     <div class="result-label">✦ &nbsp; ESTIMATED SMARTPHONE PRICE</div>
-                    <div class="result-price">{predicted_price:,.2f}</div>
+                    <div class="result-price">${predicted_price:,.2f}</div>
                     <div class="result-caption">Price predicted by your trained machine learning model.</div>
                 </div>
                 """,
